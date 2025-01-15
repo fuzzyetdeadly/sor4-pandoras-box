@@ -12,7 +12,7 @@ It is being used for modding projects like [**SOR4: Reignited**](https://gameban
 
 The games [data structures](./technical/data-structures.md) are very complex; Thus, _Pandora's box_ is designed to have minimal "training wheels" to maximize modding flexibility to the user. There **WILL** be a learning curve, so be sure to pace yourself with learning about the nuances of modding this game so you don't burn out.
 
-*Pandora's box* was created from scratch after reverse engineering the [SOR4 Swapper](https://gamebanana.com/tools/7320) and [SOR4Explorer](https://gamebanana.com/tools/7297). A special thanks to the authors of these amazing tools, which allowed this to be created!
+*Pandora's box* was created from scratch after reverse engineering the [SOR4 Swapper](https://gamebanana.com/tools/7320) and [SOR4Explorer](https://gamebanana.com/tools/7297). A special thanks to the authors of these amazing tools, for I don't think this would have been possible without them!
 
 Get ready to find out; _"What's in the box?"_
 
