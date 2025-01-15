@@ -4,11 +4,15 @@
   <img src="./assets/images/general/PandorasBoxAbout.png" alt="Pandora's box" />
 </div>
 
-**Pandora's box** is a powerful modding tool that allows you to directly modify data configurations **Streets of Rage 4** (SOR4) via its **bigfile**. The *bigfile* contains configurations that control the majority of the behaviors in the game.
+**Pandora's box** is a powerful modding tool that allows you to directly modify data configurations **Streets of Rage 4** (SOR4) via its **bigfile**.
+
+The *bigfile* contains configurations that control the majority of the behaviors in the game.
 
 It is being used for modding projects like [**SOR4: Reignited**](https://gamebanana.com/mods/473047) (by the **SoulFire team**) and **SOR4: Turbo** (by Bragdras).
 
 The games [data structures](./technical/data-structures.md) are very complex; Thus, _Pandora's box_ is designed to have minimal "training wheels" to maximize modding flexibility to the user. There **WILL** be a learning curve, so be sure to pace yourself with learning about the nuances of modding this game so you don't burn out.
+
+*Pandora's box* was created from scratch after reverse engineering the [SOR4 Swapper](https://gamebanana.com/tools/7320) and [SOR4Explorer](https://gamebanana.com/tools/7297). A special thanks to the authors of these amazing tools, which allowed this to be created!
 
 Get ready to find out; _"What's in the box?"_
 
