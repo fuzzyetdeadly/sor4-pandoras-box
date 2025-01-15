@@ -44,22 +44,44 @@ The following developments are planned for future versions, but it will be an in
   The value of this is that you don't risk corrupting your game's original bigfile.
 
 * **File protection**  
-  Bigfiles can be locked as **read-only** or with a **user/password** combination. These locks may will only come into effect the next time you attempt to open your bigfile. As long as you don't close your file, you will have the option to disable the lock after adding it. After closing the file, the *read-only* lock is **permanent**, while the latter may still be removed if the correct credentials are provided.
+  Bigfiles can be locked as **read-only** or with a **user/password** combination. These locks may will only come into effect the next time you attempt to open your *bigfile*. As long as you don't close your file, you will have the option to disable the lock after adding it. After closing the file, the *read-only* lock is **permanent**, while the latter may still be removed if the correct credentials are provided. The primary use-case for this is to allow authors to protect their work from theft.
+
+  ![File protection](../assets/images/functional/file-protection.png)
 
 * **Support for older bigfile versions**  
-  *Pandora's box* allows you to port data between new and old versions of the *bigfile*. However, due to differences in the [data structure]() of different game versions; this poses a risk of crashes when running the game, and also while using the tool.
+  *Pandora's box* allows you to port data between new and old versions of the *bigfile* (see [here](#data-tree-related)). However, due to differences in the [data structure]() of different game versions; this poses a risk of crashes when running the game, and also while using the tool.
   
   If you wish to port data between versions, you should verify the integrity of data after porting them to ensure they are structurally similar with that of the target version. Don't forget to also back your work up (preferably using [Git](../general/getting-started.md#use-git)), just in case something goes wrong.
 
 ### Data tree related
 
-ToDo: add content about data tree context menu options
+* **Select**  
+  Select data using `space` or `left double click`. This will display all configurations within the data at the right-side panel.
 
-![Under construction](../assets/images/under_construction_wip.png)
+* **Duplicate, Rename, Discard**  
+  Any data can be duplicated and renamed. Duplication will require a unique name to be supplied before it is allowed to be confirmed. The **path** of the data name you choose will determine where it is nested in the data tree. 
+
+  ![Duplicate data](../assets/images/functional/duplicate-data.png)
+
+  In the example above, the data will be located at `characters/sor4_playables/chrsor4blaze`
+
+  ![Data tree display](../assets/images/functional/data-tree-display.png)
+
+  Note that data names must adhere to a **regex pattern**. These are used in quite a few places within *Pandora's box* to prevent bad inputs. For the above example, it is:
+  
+  ```powershell
+  ^characters\/sor[1-4]_(enemies|playables)(\/[\-\w]+)+$
+  ```
+  I recommend copy and pasting this to [regex101.com](https://regex101.com/), for an explanation of what it does (too technical to explain for this document).
+
+* **Copy to/from file**  
+  When working with [multi-instancing](#general), the option to copy a data block to a temporary file, then back into another open *bigfile* is available. This is useful when developing new content for your mod in a sacrificial file, which can easily be ported back to your main one later. It is also useful for porting examples from other open-source bigfiles into your project for use.
 
 ### Configuration tree related
 
 ToDo: add content about info tree context menu options
+
+![Under construction](../assets/images/under_construction_wip.png)
 
 ### Misc
 
