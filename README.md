@@ -12,7 +12,7 @@ The games [data structures](./technical/data-structures.md) are very complex; Th
 
 Get ready to find out; _"What's in the box?"_
 
-**Latest stable release**: [v0.8.1]()
+**Latest stable release**: [v0.8.1](https://github.com/fuzzyetdeadly/sor4-pandoras-box/releases/tag/v0.8.1)
 
 **Mirrors**
 

@@ -6,6 +6,23 @@ This page contains information about
 * Known limitations of the editor and game engine are also documented here.
 * Other noteworthy findings that were discovered about the bigfile
 
+### Contents
+
+- [Project information](#project-information)
+    - [Contents](#contents)
+  - [Release strategy](#release-strategy)
+  - [Roadmap](#roadmap)
+  - [Current capabilities](#current-capabilities)
+    - [General](#general)
+    - [Bigfile related](#bigfile-related)
+    - [Data tree related](#data-tree-related)
+    - [Configuration tree related](#configuration-tree-related)
+    - [Misc](#misc)
+  - [Known limitations](#known-limitations)
+    - [Editor](#editor)
+    - [Game engine](#game-engine)
+  - [Interesting behaviors](#interesting-behaviors)
+
 ## Release strategy
 
 **Pandora's box** official releases will be published to [GameBanana]() and [NexusMods](). Optionally, you can also get a copy from this repository's [release page]().
