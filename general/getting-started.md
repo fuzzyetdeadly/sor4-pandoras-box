@@ -22,7 +22,7 @@ The game's data configurations can get VERY confusing. It will take trial and er
 
 ### Should haves
 
-* A copy of **Streets of Rage 4** (SOR4), preferably on ***Steam*** to benefit from the tool's [(Re)run game]() feature.  
+* A copy of **Streets of Rage 4** (SOR4), preferably on ***Steam*** to benefit from the tool's [(Re)run game](../functional/project-information.md#general) feature.  
 ![Mind:](../assets/images/icons/icon_warning.png) If you don't have the game on *Steam*, it should still work for *Epic games store* and *GoG versions*. The main difference is that you'll need to re-start your game each time after saving changes to your bigfile. You also won't be able to benefit from the [mod anywhere](../functional/project-information.md#bigfile-related) feature.
 
 ## Bigfile modding

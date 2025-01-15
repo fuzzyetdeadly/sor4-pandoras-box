@@ -25,7 +25,7 @@ This page contains information about
 
 ## Release strategy
 
-**Pandora's box** official releases will be published to [GameBanana]() and [NexusMods](). Optionally, you can also get a copy from this repository's [release page]().
+**Pandora's box** official releases will be published to [GameBanana]() and [NexusMods](). Optionally, you can also get a copy from this repository's [release page](https://github.com/fuzzyetdeadly/sor4-pandoras-box/releases/latest).
 
 **Nightly builds** will be available to anyone who wishes to participate in our **open beta**. If you are interested to participate, please join us at [Discord](https://discord.gg/UzrMtCD7y9) and say "Hi", and let me know your intention, so that I may assign you a role to see the **modders corner** group in the server.
 
@@ -66,7 +66,7 @@ The following developments are planned for future versions, but it will be an in
   ![File protection](../assets/images/functional/file-protection.png)
 
 * **Support for older bigfile versions**  
-  *Pandora's box* allows you to port data between new and old versions of the *bigfile* (see [here](#data-tree-related)). However, due to differences in the [data structure]() of different game versions; this poses a risk of crashes when running the game, and also while using the tool.
+  *Pandora's box* allows you to port data between new and old versions of the *bigfile* (see [here](#data-tree-related)). However, due to differences in the [data structure](../technical/data-structures.md) of different game versions; this poses a risk of crashes when running the game, and also while using the tool.
   
   If you wish to port data between versions, you should verify the integrity of data after porting them to ensure they are structurally similar with that of the target version. Don't forget to also back your work up (preferably using [Git](../general/getting-started.md#use-git)), just in case something goes wrong.
 
