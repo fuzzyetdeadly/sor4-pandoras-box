@@ -28,7 +28,7 @@ The following developments are planned for future versions, but it will be an in
 ### General
 
 * **Multi-instancing**  
-  Multiple copies of Pandora's box can be run in parallel. The value of this is explained [here](../general/getting-started.md#use-multi-instancing)
+  Multiple copies of *Pandora's box* can be run in parallel. The value of this is explained [here](../general/getting-started.md#use-multi-instancing)
 * **(Steam only) (Re)run game**  
   When you begin modding the bigfile, you'll quickly realize that you'll need to restart the game **A LOT**. This feature allows you to do so in one click (or hotkey). It works with the [modify from anywhere](#bigfile-related) feature.
 * **Lazy loading**  
@@ -45,6 +45,11 @@ The following developments are planned for future versions, but it will be an in
 
 * **File protection**  
   Bigfiles can be locked as **read-only** or with a **user/password** combination. These locks may will only come into effect the next time you attempt to open your bigfile. As long as you don't close your file, you will have the option to disable the lock after adding it. After closing the file, the *read-only* lock is **permanent**, while the latter may still be removed if the correct credentials are provided.
+
+* **Support for older bigfile versions**  
+  *Pandora's box* allows you to port data between new and old versions of the *bigfile*. However, due to differences in the [data structure]() of different game versions; this poses a risk of crashes when running the game, and also while using the tool.
+  
+  If you wish to port data between versions, you should verify the integrity of data after porting them to ensure they are structurally similar with that of the target version. Don't forget to also back your work up (preferably using [Git](../general/getting-started.md#use-git)), just in case something goes wrong.
 
 ### Data tree related
 
