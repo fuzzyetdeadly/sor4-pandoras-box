@@ -43,6 +43,7 @@ There may be opportunities to enhance existing pages to have improved readabilit
 * Use images to boost the clarity of what you are describing in your content  
 ![Info:](../assets/images/icons/icon_info.png) These can be placed in the `./assets/images/tutorials` folder
 * **\[Optionally\]** Use videos to describe your solution
+* **\[Optionally\]** Make references to [data structures](../technical/data-structures.md) to describe your solution where relevant.
 
 ### Don't
 

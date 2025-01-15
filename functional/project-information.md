@@ -55,6 +55,8 @@ The following developments are planned for future versions, but it will be an in
 
 ### Data tree related
 
+Data trees represent all the [data chunks](../technical/data-structures.md#data-chunk) found within a *bigfile*.
+
 * **Select**  
   Select data using `space` or `left double click`. This will display all configurations within the data at the right-side panel.
 
@@ -79,14 +81,25 @@ The following developments are planned for future versions, but it will be an in
 
 ### Configuration tree related
 
-ToDo: add content about info tree context menu options
+Configuration trees represent all the [data structures](../technical/data-structures.md#data-type-structures) containing configurations, which are unpacked from *data chunks*. Please read the [terminology](../technical/data-structures.md#terminology) before you continue. Without them, some concepts will be difficult to explain for this section.
 
-![Under construction](../assets/images/under_construction_wip.png)
+* **Standard configuration operations**  
+  There are a variety of operations you may perform on the data structures within this tree, and there are also restrictions for use cases that don't make sense.
+  
+  The operations expected to be most common are **Copy**, **Cut**, **Paste**, **Edit**, **Delete**.
+  
+  **Add** is available, but is exclusive to empty *collections*. It is also allowed to **Duplicate** fields within a *collection*. Both these operations are needed for collections, which don't allow *paste* (technical limitation)
+  
+  Last but not least, **Sort** is available when working with `LevelData` `Timeline` groups (which are mostly in a messed up sequence).
+
+![Info: ](../assets/images/icons/icon_info.png) Restrictions are not explained in detail here. They should be quite obvious by inspecting the context menu for different nodes within the configuration tree.
 
 ### Misc
 
 * Customization (settings/definitions)
 * Language wheel
+
+![Under construction](../assets/images/under_construction_wip.png)
 
 ## Known limitations
 
@@ -99,6 +112,8 @@ These are limitations that the creators of Pandora's box do not have the knowled
 * Adding custom sounds to the game's `*.bnk` files.  
   While exploring the **bigfile**, no useful information could be found about how the game identifies sounds with meaningful names in the `*.bnk` files of the game's `data` directory.  
   There is a [Sound replacer](https://gamebanana.com/tools/7816) tool, but I suspect this is only able to replace existing sounds, and not add new ones.
+* For the configuration tree, many operations aren't supported for *collections*. 
+  This is a trade-off for a cleaner visualization of the configuration tree. The alternative would be a mess of folders for collections.
 
 ### Game engine
 
