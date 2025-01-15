@@ -96,10 +96,22 @@ Configuration trees represent all the [data structures](../technical/data-struct
 
 ### Misc
 
-* Customization (settings/definitions)
-* Language wheel
+* **Settings**  
+  The following settings allow you to customize the look and feel of *Pandora's box*  
+  ![Settings](../assets/images/functional/settings-dialog.png)  
+  They are mostly self-explanatory with examples.
 
-![Under construction](../assets/images/under_construction_wip.png)
+  ![Mind: ](../assets/images/icons/icon_warning.png) Auto-select data is intended to be deprecated in future. It is recommended not to enable it (to avoid getting used to it)
+* **User friendly language editing**   
+  The *simple language tree* setting presents a more minimal configuration tree for `Localization` data. Without it, you will normally see every language displayed in the tree, which is challenging to navigate.
+  ![Simple language tree](../assets/images/functional/simple-language-tree.png)
+  
+  Additionally, a dialog allowing you to rotate between languages (for quicker editing) is also available, with or without *simple language tree* enabled.
+* **Definition management**  
+  **Pandora's box** uses a definition management system to recognize the purpose of configurable *fields* within every [data structure](../technical/data-structures.md), by identifying their **type**. This will affect how the edit interface for a *field* is presented to users.
+  ![Definition dialog](../assets/images/functional/definition-dialog.png)
+
+  ![Info: ](../assets/images/icons/icon_info.png) Most of the commonly used fields are already defined as part of the *Pandora's box* artifact. If there are any unknowns, kindly report it to our [Discord](https://discord.gg/UzrMtCD7y9), so that it may be investigated and updated for a future version of the tool.
 
 ## Known limitations
 
