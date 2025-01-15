@@ -25,7 +25,7 @@ This page contains information about
 
 ## Release strategy
 
-**Pandora's box** official releases will be published to [GameBanana]() and [NexusMods](). Optionally, you can also get a copy from this repository's [release page](https://github.com/fuzzyetdeadly/sor4-pandoras-box/releases/latest).
+**Pandora's box** official releases will be published to [GameBanana](https://gamebanana.com/tools/18927) and [NexusMods](). Optionally, you can also get a copy from this repository's [release page](https://github.com/fuzzyetdeadly/sor4-pandoras-box/releases/latest).
 
 **Nightly builds** will be available to anyone who wishes to participate in our **open beta**. If you are interested to participate, please join us at [Discord](https://discord.gg/UzrMtCD7y9) and say "Hi", and let me know your intention, so that I may assign you a role to see the **modders corner** group in the server.
 

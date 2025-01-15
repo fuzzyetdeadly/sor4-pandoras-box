@@ -20,7 +20,7 @@ The latest stable release can be found [**here**](https://github.com/fuzzyetdead
 
 **Mirrors**
 
-* [GameBanana]()
+* [GameBanana](https://gamebanana.com/tools/18927)
 * [NexusMods]()
 
 ## Contents

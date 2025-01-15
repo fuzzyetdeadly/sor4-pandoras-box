@@ -12,7 +12,7 @@ This page provides information on the requirements to mod with **Pandora's box**
 
 ### Must haves
 
-* A copy of *Pandora's box* from [GameBanana]() or [NexusMods]()
+* A copy of *Pandora's box* from [GameBanana](https://gamebanana.com/tools/18927) or [NexusMods]()
 * **Windows 10** or newer  
 (Unfortunately, I don't know how to configure the code compiler to work for Mac and Linux, and have no plans to learn how as it would cost me extra maintenance. Sorry!)
 * **.NET 8.0** runtime.  
