@@ -149,6 +149,9 @@ These are limitations that the creators of Pandora's box do not have the knowled
 These are things that were discovered during development to not be possible to achieve without changes to the game's source code.
 
 * Creating new inputs (i.e. new button mappings) into the game
+* Configuring input priority  
+  There are certain conditions where the game will prioritize certain inputs over others.  
+  For example, configure a `move` (**A**) with input `➡️➡️ + Special` for a character that can run. If you run and try to do a move with input `➡️ + Special` (**B**), you're always going to get *A*, unless you release the input and press it again.
 * Configuring moves other than defensive special to cancel out of hitstun
 * Modifying the juggle protection time limit (yes, there actually is one)
 * Creating custom menu items in the game menus.  
@@ -163,3 +166,4 @@ These are things that were discovered during development to not be possible to a
 This section contains information about noteworthy surprises found within the bigfile
 
 * The game supports multiple **"stances"** for characters. These are used for characters such as Murphy to control their ability to access different moves (e.g. armor, other moves, etc.) when they switch stances. Note that if armor/stamina is configured, it will be the same for every stance above the original.
+* It is possible to have more than one `move` switched using the move selection. Every `move` has a configuration allowing you to bind it to one of the character select options, and another to configure the `alt move`. By assigning these inputs, you can have sets of moves to switch with character move selection!
