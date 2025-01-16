@@ -27,7 +27,7 @@ See [here](#data-set-structures) for details.
 The *data structures* within each *data set* is extremely complex. The following terminology will be used to describe them.
 
 * **Group**: each *data set* will unpack into many **data groups**. *Groups* can contain other nested *groups*. They will often also contain *fields*.
-* **Fields** are configurable variables that may be at *data set* level, or within a *group*.
+* **Fields** are configurable variables that may be owned by *data sets* or *groups*.
 * **Collection**: these are a special *group* that contains only *fields* with duplicate *identifiers* (ID). For example, stage sections (has an ID of `*.1`).
   ![Collection section](../assets/images/technical/collection-section.png)
 * **Identifiers**: are *Pandora's box's* means of differentiating the meanings of the absolute mess of variables within each *data set*.
@@ -36,6 +36,12 @@ The *data structures* within each *data set* is extremely complex. The following
 ## Data set structures
 
 This section provides and overview of the *data structures* of various *data sets* (with focus on the more interesting ones). They represent how *data groups* relate to one another. 
+
+![Under construction](../assets/images/under_construction_wip.png)
+
+## Data types
+
+Every *field* has a data type. This section provides details on the data types you can expect to work with in the *bigfile*.
 
 ![Under construction](../assets/images/under_construction_wip.png)
 
