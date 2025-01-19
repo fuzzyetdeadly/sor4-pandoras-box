@@ -21,7 +21,7 @@ The latest stable release can be found [**here**](https://github.com/fuzzyetdead
 **Mirrors**
 
 * [GameBanana](https://gamebanana.com/tools/18927)
-* [NexusMods]()
+* [NexusMods](https://www.nexusmods.com/streetsofrage4/mods/174)
 
 ## Contents
 
