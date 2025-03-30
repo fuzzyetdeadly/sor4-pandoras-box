@@ -37,9 +37,19 @@ The *data structures* within each *data set* is extremely complex. The following
 
 ## Data types
 
-Every *field* has a data type. This section provides details on the data types you can expect to work with in the *bigfile*.
+Every *field* has a data type. These are the various data types you can expect to work with in the *bigfile*. They can be found directly within data and field groups. Unused types are intentionally ommitted.
 
-![Under construction](../assets/images/under_construction_wip.png)
+| Name      | Description |
+|-----------|-------------|
+| Varint    | Undefined Protobuf varint. May be `Boolean` or `Int` |
+| Boolean   | True or False  |
+| Int       | Signed integer |
+| ScaledInt | Signed scaled integer = (Int / 65536) to get a floating point number |
+| Enum      | Preset control options |
+| Float32   | Floating point number |
+| String    | Mostly descriptions or `WWise` audio/music references |
+| Text      | Multi-line strings, used only for `Localization` data |
+| Data      | References to other data in the `bigfile` |
 
 ## Data set structures
 
