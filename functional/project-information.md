@@ -109,6 +109,17 @@ Configuration trees represent all the [data structures](../technical/data-struct
   
   Last but not least, **Sort** is available when working with `LevelData` `Timeline` groups (which are mostly in a messed up sequence).
 
+* **Batch operations dialog**  
+  For additional convenience, a batch operations dialog was introduced. This can be used in the following different modes:
+
+  * *Copy*: Copies the value of a field to a selection of similar fields
+  * *Edit*: Allows batch editing of a selection of similar fields
+  * *Find and Edit*: Allows you to search for any field by data type. This isn't supported for collections and localization data
+
+  The dialog also allows you to specify combination filters to narrow the scope and make it more manageable, as some data can have >10k fields.
+
+  ![Batch operations dialog](../assets/images/functional/batch-operations-dialog.png)
+
 ![Info: ](../assets/images/icons/icon_info.png) Restrictions are not explained in detail here. They should be quite obvious by inspecting the context menu for different nodes within the configuration tree.
 
 ### Misc
@@ -119,11 +130,18 @@ Configuration trees represent all the [data structures](../technical/data-struct
   They are mostly self-explanatory with examples.
 
   ![Mind: ](../assets/images/icons/icon_warning.png) Auto-select data is intended to be deprecated in future. It is recommended not to enable it (to avoid getting used to it)
+
 * **User friendly language editing**   
   The *simple language tree* setting presents a more minimal configuration tree for `Localization` data. Without it, you will normally see every language displayed in the tree, which is challenging to navigate.
   ![Simple language tree](../assets/images/functional/simple-language-tree.png)
   
   Additionally, a dialog allowing you to rotate between languages (for quicker editing) is also available, with or without *simple language tree* enabled.
+
+* **Raw data inspection**
+  The option is available to view field group and field configurations in their raw hexcode data format. The use case of this is primarily to debug strange cases where things don't get decoded properly.
+
+  ![Raw data inspection](../assets/images/functional/raw-data-inspection.png)
+
 * **Definition management**  
   **Pandora's box** uses a definition management system to recognize the purpose of configurable *fields* within every [data structure](../technical/data-structures.md), by identifying their **type**. This will affect how the edit interface for a *field* is presented to users.
   ![Definition dialog](../assets/images/functional/definition-dialog.png)
