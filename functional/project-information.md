@@ -36,8 +36,9 @@ This page contains information about
 The following developments are planned for future versions, but it will be an indefinite amount of time before they become available. They aren't in any particular order of priority. These are left vague on purpose, as they are high level ideas.
 
 * Miscellenous usability improvements (ongoing)
-* More responsive UI (currently some things don't update instantly)
+* Complete descriptions for all exposed data types
 * Chaos generator (requested by MoonLightFox)
+* Patch management (for using multiple mods at once)
 * *And more...*
 
 ## Current capabilities
