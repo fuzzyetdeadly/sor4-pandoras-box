@@ -13,9 +13,11 @@ Interesting ones include
 * MetaGameConfig
 * Localization
 * Character
+* BtNode
 * AnimatedSprite
 * Sprite
 * Pickup
+* Projectile
 * Level
 * Decor
 * SurvivalConfig
@@ -33,15 +35,25 @@ The *data structures* within each *data set* is extremely complex. The following
 * **Identifiers**: are *Pandora's box's* means of differentiating the meanings of the absolute mess of variables within each *data set*.
 * **Group list**: an array of *groups*. When you see a *group*, you can expect it's always going to be within a *group list*. In the image above, the folder `Sections (1)` is a *group list*, while the folder `1 (3)` is a section group/collection. Unfortunately, this is necessary complexity to visualize the data within the bigfile, to ensure similar *groups* don't get muddled with one another.
 
+## Data types
+
+Every *field* has a data type. These are the various data types you can expect to work with in the *bigfile*. They can be found directly within data and field groups. Unused types are intentionally ommitted.
+
+| Name      | Description |
+|-----------|-------------|
+| Varint    | Undefined Protobuf varint. May be `Boolean` or `Int` |
+| Boolean   | True or False  |
+| Int       | Signed integer |
+| ScaledInt | Signed scaled integer = (Int / 65536) to get a floating point number |
+| Enum      | Preset control options |
+| Float32   | Floating point number |
+| String    | Mostly descriptions or `WWise` audio/music references |
+| Text      | Multi-line strings, used only for `Localization` data |
+| Data      | References to other data in the `bigfile` |
+
 ## Data set structures
 
 This section provides and overview of the *data structures* of various *data sets* (with focus on the more interesting ones). They represent how *data groups* relate to one another. 
-
-![Under construction](../assets/images/under_construction_wip.png)
-
-## Data types
-
-Every *field* has a data type. This section provides details on the data types you can expect to work with in the *bigfile*.
 
 ![Under construction](../assets/images/under_construction_wip.png)
 

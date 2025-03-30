@@ -36,8 +36,9 @@ This page contains information about
 The following developments are planned for future versions, but it will be an indefinite amount of time before they become available. They aren't in any particular order of priority. These are left vague on purpose, as they are high level ideas.
 
 * Miscellenous usability improvements (ongoing)
-* More responsive UI (currently some things don't update instantly)
+* Complete descriptions for all exposed data types
 * Chaos generator (requested by MoonLightFox)
+* Patch management (for using multiple mods at once)
 * *And more...*
 
 ## Current capabilities
@@ -109,6 +110,17 @@ Configuration trees represent all the [data structures](../technical/data-struct
   
   Last but not least, **Sort** is available when working with `LevelData` `Timeline` groups (which are mostly in a messed up sequence).
 
+* **Batch operations dialog**  
+  For additional convenience, a batch operations dialog was introduced. This can be used in the following different modes:
+
+  * *Copy*: Copies the value of a field to a selection of similar fields
+  * *Edit*: Allows batch editing of a selection of similar fields
+  * *Find and Edit*: Allows you to search for any field by data type. This isn't supported for collections and localization data
+
+  The dialog also allows you to specify combination filters to narrow the scope and make it more manageable, as some data can have >10k fields.
+
+  ![Batch operations dialog](../assets/images/functional/batch-operations-dialog.png)
+
 ![Info: ](../assets/images/icons/icon_info.png) Restrictions are not explained in detail here. They should be quite obvious by inspecting the context menu for different nodes within the configuration tree.
 
 ### Misc
@@ -119,11 +131,18 @@ Configuration trees represent all the [data structures](../technical/data-struct
   They are mostly self-explanatory with examples.
 
   ![Mind: ](../assets/images/icons/icon_warning.png) Auto-select data is intended to be deprecated in future. It is recommended not to enable it (to avoid getting used to it)
+
 * **User friendly language editing**   
   The *simple language tree* setting presents a more minimal configuration tree for `Localization` data. Without it, you will normally see every language displayed in the tree, which is challenging to navigate.
   ![Simple language tree](../assets/images/functional/simple-language-tree.png)
   
   Additionally, a dialog allowing you to rotate between languages (for quicker editing) is also available, with or without *simple language tree* enabled.
+
+* **Raw data inspection**
+  The option is available to view field group and field configurations in their raw hexcode data format. The use case of this is primarily to debug strange cases where things don't get decoded properly.
+
+  ![Raw data inspection](../assets/images/functional/raw-data-inspection.png)
+
 * **Definition management**  
   **Pandora's box** uses a definition management system to recognize the purpose of configurable *fields* within every [data structure](../technical/data-structures.md), by identifying their **type**. This will affect how the edit interface for a *field* is presented to users.
   ![Definition dialog](../assets/images/functional/definition-dialog.png)
@@ -138,10 +157,11 @@ Please take note of the following known limitations before placing a request for
 
 These are limitations that the creators of Pandora's box do not have the knowledge or capacity to build. It also includes things that were decided not to work on, mostly on the grounds that the effort to build it doesn't justify the value generated.
 
-* Adding custom sounds to the game's `*.bnk` files.  
+* **Adding custom sounds to the game's `*.bnk` files.**  
   While exploring the **bigfile**, no useful information could be found about how the game identifies sounds with meaningful names in the `*.bnk` files of the game's `data` directory.  
+  I have also attempted to reverse engineer the `*.bnk` files, and found that they are created by WWise project files which aren't straightforward to decipher. The file format is even more complicated than that of `bigfile`, so I will not be adding support for modding `*.bnk` files to `Pandora's box` (too hard for me).  
   There is a [Sound replacer](https://gamebanana.com/tools/7816) tool, but I suspect this is only able to replace existing sounds, and not add new ones.
-* For the configuration tree, many operations aren't supported for *collections*. 
+* **For the configuration tree, many operations aren't supported for *collections*.**  
   This is a trade-off for a cleaner visualization of the configuration tree. The alternative would be a mess of folders for collections.
 
 ### Game engine
@@ -160,6 +180,7 @@ These are things that were discovered during development to not be possible to a
   Sadly, this is not possible. Therefore, to add custom textures, the core game texture files require modification. The impact of this is that it makes it harder to create mods that utilize custom textures.
 * Customizing the game's music tracks  
   The games background music in general seems to be a combination of a lot of cut-up sounds working together. There are hundreds to thousands of sounds in the game, and no evidence could be found in the bigfile of how the game decides which sounds to *"stitch together"*.
+* Adding additional alt-moves. A few of us have investigated this, and found that the game engine is only capably of handling one alt-move.  
 
 ## Interesting behaviors
 
@@ -167,3 +188,4 @@ This section contains information about noteworthy surprises found within the bi
 
 * The game supports multiple **"stances"** for characters. These are used for characters such as Murphy to control their ability to access different moves (e.g. armor, other moves, etc.) when they switch stances. Note that if armor/stamina is configured, it will be the same for every stance above the original.
 * It is possible to have more than one `move` switched using the move selection. Every `move` has a configuration allowing you to bind it to one of the character select options, and another to configure the `alt move`. By assigning these inputs, you can have sets of moves to switch with character move selection!
+* The game uses `WWise` for sound playback. There are configurations for how sounds are grouped and pre-processed before playback in the `Init.bnk`. This is the reason why if you mod sounds, sometimes they don't sound like what you would expect. It is also the reason some sound references in `bigfile` are able to play a variety of sounds (because they're grouped together)
