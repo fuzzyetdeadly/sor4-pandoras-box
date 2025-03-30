@@ -156,10 +156,11 @@ Please take note of the following known limitations before placing a request for
 
 These are limitations that the creators of Pandora's box do not have the knowledge or capacity to build. It also includes things that were decided not to work on, mostly on the grounds that the effort to build it doesn't justify the value generated.
 
-* Adding custom sounds to the game's `*.bnk` files.  
+* **Adding custom sounds to the game's `*.bnk` files.**  
   While exploring the **bigfile**, no useful information could be found about how the game identifies sounds with meaningful names in the `*.bnk` files of the game's `data` directory.  
+  I have also attempted to reverse engineer the `*.bnk` files, and found that they are created by WWise project files which aren't straightforward to decipher. The file format is even more complicated than that of `bigfile`, so I will not be adding support for modding `*.bnk` files to `Pandora's box` (too hard for me).  
   There is a [Sound replacer](https://gamebanana.com/tools/7816) tool, but I suspect this is only able to replace existing sounds, and not add new ones.
-* For the configuration tree, many operations aren't supported for *collections*. 
+* **For the configuration tree, many operations aren't supported for *collections*.**  
   This is a trade-off for a cleaner visualization of the configuration tree. The alternative would be a mess of folders for collections.
 
 ### Game engine
@@ -178,6 +179,7 @@ These are things that were discovered during development to not be possible to a
   Sadly, this is not possible. Therefore, to add custom textures, the core game texture files require modification. The impact of this is that it makes it harder to create mods that utilize custom textures.
 * Customizing the game's music tracks  
   The games background music in general seems to be a combination of a lot of cut-up sounds working together. There are hundreds to thousands of sounds in the game, and no evidence could be found in the bigfile of how the game decides which sounds to *"stitch together"*.
+* Adding additional alt-moves. A few of us have investigated this, and found that the game engine is only capably of handling one alt-move.  
 
 ## Interesting behaviors
 
@@ -185,3 +187,4 @@ This section contains information about noteworthy surprises found within the bi
 
 * The game supports multiple **"stances"** for characters. These are used for characters such as Murphy to control their ability to access different moves (e.g. armor, other moves, etc.) when they switch stances. Note that if armor/stamina is configured, it will be the same for every stance above the original.
 * It is possible to have more than one `move` switched using the move selection. Every `move` has a configuration allowing you to bind it to one of the character select options, and another to configure the `alt move`. By assigning these inputs, you can have sets of moves to switch with character move selection!
+* The game uses `WWise` for sound playback. There are configurations for how sounds are grouped and pre-processed before playback in the `Init.bnk`. This is the reason why if you mod sounds, sometimes they don't sound like what you would expect. It is also the reason some sound references in `bigfile` are able to play a variety of sounds (because they're grouped together)
