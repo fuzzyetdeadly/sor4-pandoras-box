@@ -8,21 +8,28 @@ Each **Streets of Rage 4** (SOR4) *bigfile* is a massive concatenation of *data 
 
 Each of these represents a huge collection of configurations for various **data types**. They are read by *SOR4* and *Absolum* on load, and control a lot of aspects of the game.
 
-Interesting ones include
+Interesting ones that are mostly in the supported games include
 
-* MetaGameConfig
-* Localization
-* Character
-* BtNode
-* AnimatedSprite
-* Sprite
-* Pickup
-* Projectile
-* Level
-* Decor
-* SurvivalConfig
+|Data type|Description|
+|---|---|
+|MetaGameConfig|General configurations for the game|
+|Localization|All language configurations|
+|Character|Used to configure character behaviors, such as moves|
+|AnimatedSprite|Used to configure animations for character moves|
+|Sprite|References to textures to be displayed in game|
+|Projectile|Configurations for projectiles in game|
+|Pickup|Configurations for various types of pickups|
+|BtNode|Behavior tree, controller for AI behaviors (SOR4 only)|
+|Level|Orchestrates events that happen in stages|
+|Decor|Controls the decorative layout of stages|
+|SurvivalConfig|Settings to manipulate survival mode (SOR4 only)|
 
-See [here](#data-type-structures) for details.
+The following data types are in *Absolum* only
+
+|Data type|Description|
+|---|---|
+
+See [here](#data-type-structures) for of every data type.
 
 ### Terminology
 
