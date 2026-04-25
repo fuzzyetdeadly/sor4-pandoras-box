@@ -12,7 +12,7 @@ This page provides information on the requirements to mod with **Pandora's box**
 
 ### Must haves
 
-* A copy of *Pandora's box* from [GameBanana](https://gamebanana.com/tools/18927) or [NexusMods](https://www.nexusmods.com/streetsofrage4/mods/174)
+* A copy of *Pandora's box* from [GameBanana](https://gamebanana.com/tools/18927),  [NexusMods](https://www.nexusmods.com/streetsofrage4/mods/174) or the [releases](https://github.com/fuzzyetdeadly/sor4-pandoras-box/releases/latest) page of this repository.
 * **Windows 10** or newer  
 (Unfortunately, I don't know how to configure the code compiler to work for Mac and Linux, and have no plans to learn how as it would cost me extra maintenance. Sorry!)
 * **.NET 8.0** runtime.  
@@ -22,16 +22,16 @@ The game's data configurations can get VERY confusing. It will take trial and er
 
 ### Should haves
 
-* A copy of **Streets of Rage 4** (SOR4), preferably on ***Steam*** to benefit from the tool's [(Re)run game](../functional/project-information.md#general) feature.  
-![Mind:](../assets/images/icons/icon_warning.png) If you don't have the game on *Steam*, it should still work for *Epic games store* and *GoG versions*. The main difference is that you'll need to re-start your game each time after saving changes to your bigfile. You also won't be able to benefit from the [mod anywhere](../functional/project-information.md#bigfile-related) feature.
+* A copy of **Streets of Rage 4** (SOR4) and/or **Absolum**, preferably on ***Steam*** to benefit from the tool's [(Re)run game](../functional/project-information.md#general) feature.  
+![Mind:](../assets/images/icons/icon_warning.png) If you don't have the game(s) on *Steam*, it should still work for *Epic games store* and *GoG versions*. The main difference is that you'll need to re-start your game each time after saving changes to your *bigfile*. You also won't benefit from the [mod anywhere](../functional/project-information.md#bigfile-related) feature.
 
 ## Bigfile modding
 
-**Streets of Rage 4** (SOR4) is a heavily **data-driven** game. Many of the things you encounter in the game are configured in the game's **bigfile**. This should be at `<steam_installation_path>\steamapps\common\Streets of Rage 4\data\bigfile`.
+**Streets of Rage 4** (SOR4) and **Absolum** are both heavily **data-driven** games. Many of the things you can encounter in them are configured in the game's **bigfile**. This should be at `<steam_installation_path>\steamapps\common\<game_folder>\data\bigfile`.
 
-![Mind: ](../assets/images/icons/icon_info.png) If you own a copy of the game with Epic games or GoG, you'll need to Google to find out where the bigfile is located.
+![Mind: ](../assets/images/icons/icon_info.png) If you own a copy of the game with *Epic games* or *GoG*, you'll need to Google to find out where the *bigfile* is located.
 
-Below is an example that demonstrates a very simple modification to get you comfortable.
+Below is simple *SOR4* modification to get you comfortable.
 
 1\. Launch Pandora's box, then open your *bigfile*. The tool will remember your choice until it is changed.
 
@@ -47,7 +47,7 @@ The left panel contains the list of data types within the *bigfile*, while the r
 
 You will see **folders** and **sheets** here. Each *folder* represents a configuration **group**. *Sheets* are **fields** you can edit to change the games configuration.
 
-*Groups* will often contain nested *groups*, and also *fields* that are relevant to them. The names of *groups* are intended to be self-documenting, and to make it more obvious what the purposes of their contents are.
+*Groups* will often contain nested *groups*, and also *fields* that are relevant to them. The names of *groups* are intended to be self-documenting, which will hopefully provide a better idea of the configurations they contain.
 
 ![Info: ](../assets/images/icons/icon_info.png) Groups are a human readible representation of the *bigfile's* [data structures](../technical/data-structures.md).
 
@@ -57,7 +57,7 @@ You will see **folders** and **sheets** here. Each *folder* represents a configu
 
 `Delete` the first two sections, then save your *bigfile*.
 
-![Info: ](../assets/images/icons/icon_info.png) Deleting *groups*/*fields* does not result in data loss, you can use `insert` to restore them as long as you don't close the tool.
+![Info: ](../assets/images/icons/icon_info.png) Deleting *groups*/*fields* does not result in data loss, you can use `insert` to restore them as long as you don't close the tool. This is useful to test experimental changes, and also reverse engineer the purpose the data (by checking how the game breaks in response).
 
 5\. Run the game, and attempt to play Stage 1. You sould now be taken directly to the boss.
 
@@ -86,6 +86,16 @@ If you plan to create a heavily customized mod, I strongly recommend learning to
 3\. Once you've verified things work as expected, re-save with your first instance, and the temporary deleted data will be restored. The second instance can be closed once you no longer need to verify temporary scenarios.
 
 ![Info: ](../assets/images/icons/icon_info.png) Another value of multi-instancing is to open other bigfiles as a reference while modding your own. This can be very useful during the learning process when it isn't obvious how to achieve certain effects.
+
+### Use batch operations
+
+You may find situations where there are many deep nested *fields* you wish to update. Batch operations are available to facilitate this to reduce the need to tediously expand everything.
+
+![Stage remove section](../assets/images/tutorials/batch-operations.png)
+
+### Use filters
+
+Filters allow you to configure *Pandora's box* to display only a sub-set of *data*, *fields* and textures. There are a lot of entries for each of these, and filters allow you to keep only the ones of interest to you in view. Regular expressions are supported. 
 
 ### Save often
 
