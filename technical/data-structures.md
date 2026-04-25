@@ -2,13 +2,15 @@
 
 ## Bigfile contents
 
-Each **Streets of Rage 4** (SOR4) *bigfile* is a massive concatenation of *data chunks*. Bigfiles for different versions of the game are structurally different. This is the reason why *bigfiles* from one version of the game will crash when you attempt to use it with another.
+Each **Streets of Rage 4** (SOR4) and **Absolum** *bigfile* is a massive concatenation of **protobuf** encoded *data chunks*. Bigfiles for different versions of the game are structurally different. This is the reason why *bigfiles* from one version of the game will crash when you attempt to use it with another.
 
 ## Data chunk
 
-Each of these represents a huge collection of configurations for various **data types**. They are read by *SOR4* and *Absolum* on load, and control a lot of aspects of the game.
+When decoded, each *data chunk* contains very complex configuration trees of various **data types**. They are read by *SOR4* and *Absolum* on load, and control a lot of aspects of the game. 
 
-Interesting ones that are mostly in the supported games include:
+*Pandora's box* decodes *data chunks* by brute force, and is agnostic of the internal **data structures** of the supported games. Knowledge about the *data structures* and what various *fields* do is thereafter mapped based on what can be inferred from trial and error. 
+
+Interesting *data types* that are mostly in the supported games include:
 
 |Data type|Description|
 |---|---|
@@ -24,7 +26,7 @@ Interesting ones that are mostly in the supported games include:
 |Decor|Controls the decorative layout of stages|
 |SurvivalConfig|Settings to manipulate survival mode (SOR4 only)|
 
-Interesting *Absolum* only data types include:
+Interesting *Absolum* only *data types* include:
 
 |Data type|Description|
 |---|---|
