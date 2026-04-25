@@ -29,7 +29,7 @@ The game's data configurations can get VERY confusing. It will take trial and er
 
 **Streets of Rage 4** (SOR4) and **Absolum** are both heavily **data-driven** games. Many of the things you can encounter in them are configured in the game's **bigfile**. This should be at `<steam_installation_path>\steamapps\common\<game_folder>\data\bigfile`.
 
-![Mind: ](../assets/images/icons/icon_info.png) If you own a copy of the game with *Epic games* or *GoG*, you'll need to Google to find out where the *bigfile* is located.
+![Info:](../assets/images/icons/icon_info.png) If you own a copy of the game with *Epic games* or *GoG*, you'll need to Google to find out where the *bigfile* is located.
 
 Below is simple *SOR4* modification to get you comfortable.
 
@@ -49,7 +49,7 @@ You will see **folders** and **sheets** here. Each *folder* represents a configu
 
 *Groups* will often contain nested *groups*, and also *fields* that are relevant to them. The names of *groups* are intended to be self-documenting, which will hopefully provide a better idea of the configurations they contain.
 
-![Info: ](../assets/images/icons/icon_info.png) Groups are a human readible representation of the *bigfile's* [data structures](../technical/data-structures.md).
+![Info:](../assets/images/icons/icon_info.png) Groups are a human readible representation of the *bigfile's* [data structures](../technical/data-structures.md).
 
 4\. As a simple example, lets make Stage 1 take you straight to the boss fight. Navigate into the folder structure until you see the following.
 
@@ -85,7 +85,7 @@ If you plan to create a heavily customized mod, I strongly recommend learning to
 
 3\. Once you've verified things work as expected, re-save with your first instance, and the temporary deleted data will be restored. The second instance can be closed once you no longer need to verify temporary scenarios.
 
-![Info: ](../assets/images/icons/icon_info.png) Another value of multi-instancing is to open other bigfiles as a reference while modding your own. This can be very useful during the learning process when it isn't obvious how to achieve certain effects.
+![Info:](../assets/images/icons/icon_info.png) Another value of multi-instancing is to open other bigfiles as a reference while modding your own. This can be very useful during the learning process when it isn't obvious how to achieve certain effects.
 
 ### Use batch operations
 

@@ -20,7 +20,7 @@ This page contains information about
     - [Configuration tree related](#configuration-tree-related)
     - [Texture management related](#texture-management-related)
     - [Misc](#misc)
-	- [Known issues](#known-issues)	
+  - [Known issues](#known-issues)	
   - [Known limitations](#known-limitations)
     - [Editor](#editor)
     - [Game engine](#game-engine)
@@ -106,8 +106,19 @@ Data trees represent all the [data chunks](../technical/data-structures.md#data-
   ```
   I recommend copy and pasting this to [regex101.com](https://regex101.com/), for an explanation of what it does (too technical to explain for this document).
 
-* **Copy to/from file**  
+* **Copy to/from file and import from file**  
   When working with [multi-instancing](#general), the option to copy a data block to a temporary file, then back into another open *bigfile* is available. This is useful when developing new content for your mod in a sacrificial file, which can easily be ported back to your main one later. It is also useful for porting examples from other open-source bigfiles into your project for use.
+
+  When you copy a data chunk from file, it will create a `.\tmp\clipboard.json` in the tool's working directory. This can be shared with other modders, which they can import using the `Import from file` menu option. 
+	
+	The tool also provides some examples in its `.\extras` folder, which can be imported in similar fashion. If you're unsure how to mod certain things, it is recommended to take a look at these in case there may be an example you could follow.
+	
+* **Move SpriteData**  
+  For **SpriteData** only, it is possible to select a *SpriteData*, then select other *SpriteData* to move to the same location. This is useful when you need to bulk-move many sprites from one location to another.
+	
+	![Info:](../assets/images/icons/icon_info.png) If you wish to move many sprites to a non-existent location, rename one of them first, the move the others to the location it was renamed to.
+	
+	![Mind:](../assets/images/icons/icon_warning.png) This operation is destructive, and will replace `SpriteData` that already exists in the target location.
 
 ### Configuration tree related
 
@@ -133,7 +144,7 @@ Configuration trees represent all the [data structures](../technical/data-struct
 
   ![Batch operations dialog](../assets/images/functional/batch-operations-dialog.png)
 
-![Info: ](../assets/images/icons/icon_info.png) Restrictions are not explained in detail here. They should be quite obvious by inspecting the context menu for different nodes within the configuration tree.
+![Info:](../assets/images/icons/icon_info.png) Restrictions are not explained in detail here. They should be quite obvious by inspecting the context menu for different nodes within the configuration tree.
 
 ### Texture management related 
 
@@ -146,7 +157,7 @@ Lorem ipsum
   ![Settings](../assets/images/functional/settings-dialog.png)  
   They are mostly self-explanatory with examples.
 
-  ![Mind: ](../assets/images/icons/icon_warning.png) Auto-select data is intended to be deprecated in future. It is recommended not to enable it (to avoid getting used to it)
+  ![Mind:](../assets/images/icons/icon_warning.png) Auto-select data is intended to be deprecated in future. It is recommended not to enable it (to avoid getting used to it)
 
 * **User friendly language editing**   
   The *simple language tree* setting presents a more minimal configuration tree for `Localization` data. Without it, you will normally see every language displayed in the tree, which is challenging to navigate.
@@ -163,7 +174,7 @@ Lorem ipsum
   **Pandora's box** uses a definition management system to recognize the purpose of configurable *fields* within every [data structure](../technical/data-structures.md), by identifying their **type**. This will affect how the edit interface for a *field* is presented to users.
   ![Definition dialog](../assets/images/functional/definition-dialog.png)
 
-  ![Info: ](../assets/images/icons/icon_info.png) Most of the commonly used fields are already defined as part of the *Pandora's box* artifact. If there are any unknowns, kindly report it to our [Discord](https://discord.gg/UzrMtCD7y9), so that it may be investigated and updated for a future version of the tool.
+  ![Info:](../assets/images/icons/icon_info.png) Most of the commonly used fields are already defined as part of the *Pandora's box* artifact. If there are any unknowns, kindly report it to our [Discord](https://discord.gg/UzrMtCD7y9), so that it may be investigated and updated for a future version of the tool.
 
 ## Known issues
 
