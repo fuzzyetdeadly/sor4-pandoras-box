@@ -3,6 +3,7 @@
 This page contains information about
 
 * Planned developments of **Pandora's box**, and its current capabilites.
+* Known issues of the editor that are intended to be addressed when possible.
 * Known limitations of the editor and game engine are also documented here.
 * Other noteworthy findings that were discovered about the bigfile
 
@@ -17,7 +18,9 @@ This page contains information about
     - [Bigfile related](#bigfile-related)
     - [Data tree related](#data-tree-related)
     - [Configuration tree related](#configuration-tree-related)
+    - [Texture management related](#texture-management-related)
     - [Misc](#misc)
+	- [Known issues](#known-issues)	
   - [Known limitations](#known-limitations)
     - [Editor](#editor)
     - [Game engine](#game-engine)
@@ -25,9 +28,9 @@ This page contains information about
 
 ## Release strategy
 
-**Pandora's box** official releases will be published to [GameBanana](https://gamebanana.com/tools/18927) and [NexusMods](https://www.nexusmods.com/streetsofrage4/mods/174). Optionally, you can also get a copy from this repository's [release page](https://github.com/fuzzyetdeadly/sor4-pandoras-box/releases/latest).
+**Pandora's box** official releases are published to [GameBanana](https://gamebanana.com/tools/18927) and [NexusMods](https://www.nexusmods.com/streetsofrage4/mods/174). It can also be found at this repository's [release page](https://github.com/fuzzyetdeadly/sor4-pandoras-box/releases/latest).
 
-**Nightly builds** will be available to anyone who wishes to participate in our **open beta**. If you are interested to participate, please join us at [Discord](https://discord.gg/UzrMtCD7y9) and say "Hi", and let me know your intention, so that I may assign you a role to see the **modders corner** group in the server.
+**Nightly builds** are available to anyone who wishes to participate in our **open beta**. If you are interested to participate, please join us at [Discord](https://discord.gg/UzrMtCD7y9) and say "Hi", and let me know your intention, so that I may assign you a role to see the **modders corner** group in the server.
 
 ![Modders corner](../assets/images/functional/modders-corner.png)
 
@@ -36,9 +39,8 @@ This page contains information about
 The following developments are planned for future versions, but it will be an indefinite amount of time before they become available. They aren't in any particular order of priority. These are left vague on purpose, as they are high level ideas.
 
 * Miscellenous usability improvements (ongoing)
-* Complete descriptions for all exposed data types
+* Best effort descriptions for all exposed configurations
 * Chaos generator (requested by MoonLightFox)
-* Patch management (for using multiple mods at once)
 * *And more...*
 
 ## Current capabilities
@@ -47,15 +49,20 @@ The following developments are planned for future versions, but it will be an in
 
 * **Multi-instancing**  
   Multiple copies of *Pandora's box* can be run in parallel. The value of this is explained [here](../general/getting-started.md#use-multi-instancing)
+	
 * **(Steam only) (Re)run game**  
   When you begin modding the bigfile, you'll quickly realize that you'll need to restart the game **A LOT**. This feature allows you to do so in one click (or hotkey). It works with the [modify from anywhere](#bigfile-related) feature.
+	
 * **Lazy loading**  
   Pandora's box practices **lazy loading** of *data* and *configuration* trees. Meaning, nodes are only added to the trees on demand. This allows the tool to load quicker, by reducing redundant computations/visualization of information that isn't interesting to the user.
+	
+* **Filtering**  
+  Many of the panels and dialogs in *Pandora's box* supports filtering of entries, with support for regular expressions. These allow the user to reduce noise while modding, and stay focused on only what is interesting to them.
 
 ### Bigfile related
 
 * **Modifies most data**  
-  Most of the data in the bigfile can be modified. There are a few that are intentionally hidden, because they shouldn't be modded, or don't offer meaningful modding options.
+  Most of the data in the *bigfile* can be modified. There are a few that are intentionally hidden, because they shouldn't be modded, or don't offer meaningful modding options.
 
 * **(Steam only) Modify from anywhere**    
   You can copy a bigfile into your `My Documents` folder and edit it from there. When you save and [(Re)-run](#general) the game, the tool will create a backup of your game's bigfile, then hot-swap the file you are working on with it and start the game.  
@@ -70,6 +77,11 @@ The following developments are planned for future versions, but it will be an in
   *Pandora's box* allows you to port data between new and old versions of the *bigfile* (see [here](#data-tree-related)). However, due to differences in the [data structure](../technical/data-structures.md) of different game versions; this poses a risk of crashes when running the game, and also while using the tool.
   
   If you wish to port data between versions, you should verify the integrity of data after porting them to ensure they are structurally similar with that of the target version. Don't forget to also back your work up (preferably using [Git](../general/getting-started.md#use-git)), just in case something goes wrong.
+	
+* **Patch creation**  
+	**Patches** (*.patch) are partial *bigfiles* that modders can create by staging only data chunks they wish to include. Patches are intended to facilitate mod collaboration, and also to allow mods to be shared with smaller files. *Pandora's box* is required to apply `*.patch` files to *bigfiles*.
+	
+	![Patch creation](../assets/images/functional/patch-creation.png)
 
 ### Data tree related
 
@@ -123,6 +135,10 @@ Configuration trees represent all the [data structures](../technical/data-struct
 
 ![Info: ](../assets/images/icons/icon_info.png) Restrictions are not explained in detail here. They should be quite obvious by inspecting the context menu for different nodes within the configuration tree.
 
+### Texture management related 
+
+Lorem ipsum
+
 ### Misc
 
 * **Settings**  
@@ -148,6 +164,10 @@ Configuration trees represent all the [data structures](../technical/data-struct
   ![Definition dialog](../assets/images/functional/definition-dialog.png)
 
   ![Info: ](../assets/images/icons/icon_info.png) Most of the commonly used fields are already defined as part of the *Pandora's box* artifact. If there are any unknowns, kindly report it to our [Discord](https://discord.gg/UzrMtCD7y9), so that it may be investigated and updated for a future version of the tool.
+
+## Known issues
+
+Lorem ipsum
 
 ## Known limitations
 
