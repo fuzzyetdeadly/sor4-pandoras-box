@@ -8,7 +8,7 @@ Each **Streets of Rage 4** (SOR4) *bigfile* is a massive concatenation of *data 
 
 Each of these represents a huge collection of configurations for various **data types**. They are read by *SOR4* and *Absolum* on load, and control a lot of aspects of the game.
 
-Interesting ones that are mostly in the supported games include
+Interesting ones that are mostly in the supported games include:
 
 |Data type|Description|
 |---|---|
@@ -24,12 +24,17 @@ Interesting ones that are mostly in the supported games include
 |Decor|Controls the decorative layout of stages|
 |SurvivalConfig|Settings to manipulate survival mode (SOR4 only)|
 
-The following data types are in *Absolum* only
+Interesting *Absolum* only data types include:
 
 |Data type|Description|
 |---|---|
+|AdventureKey|List of keys that are used to track permanent and per-run meta-progression|
+|AdventureRun|Configurations for many of the random events in the game|
+|AllShop|Configurations for various shops in the game|
+|StatsConfig|Defines custom stats that can be applied to any character in the game|
+|Story|Configurations for all the story events and dialogues in the game|
 
-See [here](#data-type-structures) for of every data type.
+See [here](#data-type-structures) for the details of every data type.
 
 ### Terminology
 
