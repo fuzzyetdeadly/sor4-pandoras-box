@@ -50,7 +50,7 @@ Every *field* has a **type**. These are the various *field types* you can expect
 | String    | Mostly descriptions or `WWise` audio/music references |
 | Text      | Multi-line strings, used only for `Localization` data |
 | Data      | Reference to other data in the `bigfile` |
-| Texture   | Reference to a texture loaded by the [texture manager](../functional/project-information.md#texture-manager-related) |
+| Texture   | Reference to a texture loaded by the [texture manager](../functional/project-information.md#texture-management-related) |
 
 ## Data type structures
 
