@@ -89,7 +89,7 @@ If you plan to create a heavily customized mod, I strongly recommend learning to
 
 ### Use batch operations
 
-You may find situations where there are many deep nested *fields* you wish to update. Batch operations are available to facilitate this to reduce the need to tediously expand everything.
+You may find situations where there are many deep nested *fields* you wish to update. Batch operations are available to facilitate this and reduce the need to tediously expand everything.
 
 ![Stage remove section](../assets/images/tutorials/batch-operations.png)
 
