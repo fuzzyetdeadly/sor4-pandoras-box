@@ -225,7 +225,7 @@ The following are known issues (if any) with `Pandora's box` for the supported g
   Some *fields* from SOR4 were repurposed to do something completely different in *Absolum*.
 	e.g. For `Character.Move`, **Star cost** (`&.31`) is now **Applicable ritual type** (`&.31.1`).
 	
-	Not easy to fix, as it requires some high risk code to be modified. An fix attempt can only be made when I have the capacity to properly test that nothing breaks after it.
+	Not easy to fix, as it requires some high risk code to be modified. A fix attempt can only be made when I have the capacity to properly test that nothing breaks after the fix.
 	
 * **Nullable string references**  
   There are many string fields which are actually references to objects. These often have a definitionId that is something like `&.31.1`. Attempting to copy-paste a non-null string reference to a location where a null instance exists (as `&.31`) will result in the tool throwing an unhandled exception. The workaround to this is to first *delete* and *discard* the null string field first, then paste.
