@@ -166,7 +166,7 @@ Therefore, if you wish to publish a mod with textures already imported, it shoul
 	
 	*Import* is always handled via drag and drop, which can be done via the texture tree or texture content view. The texture content view also allows you to preview textures in their actual size by `double-clicking` on them or via selection and pressing `enter`.
 	
-	It is recommended to organize your textures in the way you wish for them to be imported using `Windows explorer` before importing them. `Pandora's box` will **NOT** support texture renaming (because it's easier to do it with explorer).
+	![Mind:](../assets/images/icons/icon_warning.png) It is recommended to organize your textures in the way you wish for them to be imported using `Windows explorer` before importing them. `Pandora's box` will **NOT** support texture renaming (because it's easier to do it with explorer).
 	
 * **Generate SpriteData**  
   It is possible to select a folder or multiple textures and directly generate `SpriteData` entries into the currently open *bigfile*.
