@@ -34,7 +34,7 @@ Interesting *Absolum* only data types include:
 |StatsConfig|Defines custom stats that can be applied to any character in the game|
 |Story|Configurations for all the story events and dialogues in the game|
 
-See [here](#data-type-structures) for the details of every data type.
+See [here](#data-type-structures) for links to the currently available data type pages.
 
 ### Terminology
 
@@ -66,7 +66,7 @@ Every *field* has a **type**. These are the various *field types* you can expect
 
 ## Data type structures
 
-This section provides overviews of the *data structures* of various *data types* (with focus on the more interesting ones). These overviews intend to make clearer how *data types* and *groups* relate to one another.
+This section contains links to overviews of the *data structures* of various *data types* (with focus on the more interesting ones). The overviews are intended to make it clearer how various *data types* and *groups* relate to one another.
 
 ![Under construction](../assets/images/under_construction_wip.png)
 
