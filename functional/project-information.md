@@ -150,7 +150,33 @@ Configuration trees represent all the [data structures](../technical/data-struct
 
 ### Texture management related 
 
-Lorem ipsum
+Texture management refers to any texture modding activity possible with *Pandora's box*.
+When loaded, they are unpacked from `textures` and `texture_table` files in the game's `.\data` directory.
+
+![Texture management](../assets/images/functional/texture-management.png)
+
+![Info:](../assets/images/icons/icon_info.png) To make custom texture imports more efficient, the tool aims to only modify the smallest `textures` file present in the game's installation. For *SOR4*, this is `textures_08`, and for Absolum, it is `textures`. Additionally, it is likely that all `textures_table` files will be modified as well for both games.
+
+Therefore, if you wish to publish a mod with textures already imported, it should be sufficient to publish only the smallest `textures` file and all the `texture_tables` files for the game of interest.
+
+* **Standard texture operations**  
+  There are a variety of operations you may perform on textures in the texture manager view, and restrictions for cases that don't make sense.
+	
+	The common operations are **Export**, **Import**, **Copy** and **Discard**.
+	
+	*Import* is always handled via drag and drop, which can be done via the texture tree or texture content view. The texture content view also allows you to preview textures in their actual size by `double-clicking` on them or via selection and pressing `enter`.
+	
+	It is recommended to organize your textures in the way you wish for them to be imported using `Windows explorer` before importing them. `Pandora's box` will **NOT** support texture renaming (because it's easier to do it with explorer).
+	
+* **Generate SpriteData**  
+  It is possible to select a folder or multiple textures and directly generate `SpriteData` entries into the currently open *bigfile*.
+	
+	![Mind:](../assets/images/icons/icon_warning.png) This operation is destructive, and will replace `SpriteData` that already exists in the target location.
+	
+* **Texture selection previews**  
+  When working with *fields* that allow texture selection, a texture preview will be displayed if textures were loaded.
+
+  ![Texture management](../assets/images/functional/texture-selection.png)	
 
 ### Misc
 
@@ -194,8 +220,15 @@ These are limitations that the creators of Pandora's box do not have the knowled
   While exploring the **bigfile**, no useful information could be found about how the game identifies sounds with meaningful names in the `*.bnk` files of the game's `data` directory.  
   I have also attempted to reverse engineer the `*.bnk` files, and found that they are created by WWise project files which aren't straightforward to decipher. The file format is even more complicated than that of `bigfile`, so I will not be adding support for modding `*.bnk` files to `Pandora's box` (too hard for me).  
   There is a [Sound replacer](https://gamebanana.com/tools/7816) tool, but I suspect this is only able to replace existing sounds, and not add new ones.
+
 * **For the configuration tree, many operations aren't supported for *collections*.**  
   This is a trade-off for a cleaner visualization of the configuration tree. The alternative would be a mess of folders for collections.
+
+* **Textures can only be loaded once per tool run**  
+  Once textures are loaded, if you need to re-load them from another location (different game), you will need to restart the tool. This is a technical limitation due to how the texture manager's loading logic is currently implemented.
+	
+* **Texture renaming is not supported**  
+  It is much easier to organize textures using `Windows explorer` then import them, as opposed to importing and managing them in the tool. The effort required to create this feature also isn't worth the value it creates, granted a good workaround exists.
 
 ### Game engine
 
