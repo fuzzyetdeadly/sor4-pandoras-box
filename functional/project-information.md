@@ -232,6 +232,9 @@ These are limitations that the creators of Pandora's box do not have the knowled
 * **Texture renaming is not supported**  
   It is much easier to organize textures using `Windows explorer` then import them, as opposed to importing and managing them in the tool. The effort required to create this feature also isn't worth the value it creates, granted a good workaround exists.
 
+* **SpriteData movement and generation is destructive**  
+  It wasn't possible to come up with an intuitive and user friendly way to manage clashing `SpriteData` names with bulk operations. Therefore, it was decided to allow both these actions to always overwrite existing `SpriteData` at their target locations.
+
 ### Game engine
 
 These are things that were discovered during development to not be possible to achieve without changes to the game's source code.
