@@ -6,7 +6,11 @@ The categorization and layout of the contents here is expected to evolve as more
 
 ## Contents
 
-![Under construction](../assets/images/under_construction_wip.png)
+### Youtube
+
+|Author|Topic|Difficulty|
+||||
+|ShadG|[How to play as enemies and bosses and swap enemies](https://www.youtube.com/watch?v=sRPM9h0fS5M)|⭐|
 
 ## How can I contribute?
 
