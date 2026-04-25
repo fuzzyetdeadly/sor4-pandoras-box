@@ -208,7 +208,23 @@ Therefore, if you wish to publish a mod with textures already imported, it shoul
 
 ## Known issues
 
-Lorem ipsum
+The following are known issues (if any) with `Pandora's box` for the supported games. They are intended to be fixed when there is enough knowledge and development capacity to do so.
+
+### Absolum
+
+* **Refactored fields from SOR4**  
+  Some *fields* from SOR4 were refactored to work differently for *Absolum*.
+	e.g. For `Character.Move.Hit`, X and Y forces used to be *fields*, but are now `FixModifier` field groups.
+
+* **Inaccurate enums**  
+  There are a number of enums that were also refactored from SOR4. Unfortunately, it is not very obvious what they do. `FixModifier` is one example, where additional entries were added, and little is currently known about what the new entries do. `Charcater.Move` *condition* and *action* (used for move inputs) was also changed, so they aren't represented correctly for Absolum. Unfortunately, this cannot be fixed quickly as it requires a significant rework to how enum settings are managed by the tool.
+	
+* **Repurposed fields from SOR4**
+  Some *fields* from SOR4 were repurposed to do something completely different in *Absolum*.
+	e.g. For `Character.Move`, **Star cost** (`&.31`) is now **Applicable ritual type** (`&.31.1`)
+	
+* **Nullable string references**  
+  There are many string fields which are actually references to objects. These often have a definitionId that is something like `&.31.1`. Attempting to copy-paste a non-null string reference to a location where a null instance exists (as `&.31`) will result in the tool throwing an unhandled exception. The workaround to this is to first *delete* and *discard* the null string field first, then paste.
 
 ## Known limitations
 
