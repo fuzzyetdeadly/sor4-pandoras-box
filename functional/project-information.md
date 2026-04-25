@@ -171,6 +171,8 @@ Therefore, if you wish to publish a mod with textures already imported, it shoul
 * **Generate SpriteData**  
   It is possible to select a folder or multiple textures and directly generate `SpriteData` entries into the currently open *bigfile*.
 	
+	The `SpriteData` will be created with assumptions that they have no X and Y offsets, and width and height matching the dimensions of the selected textures.
+	
 	![Mind:](../assets/images/icons/icon_warning.png) This operation is destructive, and will replace `SpriteData` that already exists in the target location.
 	
 * **Texture selection previews**  
