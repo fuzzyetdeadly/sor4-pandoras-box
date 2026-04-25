@@ -114,7 +114,7 @@ Data trees represent all the [data chunks](../technical/data-structures.md#data-
 	The tool also provides some examples in its `.\extras` folder, which can be imported in similar fashion. If you're unsure how to mod certain things, it is recommended to take a look at these in case there may be an example you could follow.
 	
 * **Move SpriteData**  
-  For **SpriteData** only, it is possible to select a *SpriteData*, then select other *SpriteData* to move to the same location. This is useful when you need to bulk-move many sprites from one location to another.
+  For `SpriteData` only, it is possible to select a *SpriteData*, then through a dialog prompt, select other *SpriteData* to move to the same location. This is intended for bulk-moving many sprites from one location to another.
 	
 	![Info:](../assets/images/icons/icon_info.png) If you wish to move many sprites to a non-existent location, rename one of them first, the move the others to the location it was renamed to.
 	
@@ -127,10 +127,12 @@ Configuration trees represent all the [data structures](../technical/data-struct
 * **Standard configuration operations**  
   There are a variety of operations you may perform on the data structures within this tree, and there are also restrictions for use cases that don't make sense.
   
-  The operations expected to be most common are **Copy**, **Cut**, **Paste**, **Edit**, **Delete**.
+  The operations expected to be most common are **Copy**, **Cut**, **Paste**, **Edit**, **Undelete**, **Delete** and **Discard**.
   
   **Add** is available, but is exclusive to empty *collections*. It is also allowed to **Duplicate** fields within a *collection*. Both these operations are needed for collections, which don't allow *paste* (technical limitation)
   
+	Furthermore, **duplicate** is supported for configuration groups as an alternative to copy-pasting them.
+	
   Last but not least, **Sort** is available when working with `LevelData` `Timeline` groups (which are mostly in a messed up sequence).
 
 * **Batch operations dialog**  
